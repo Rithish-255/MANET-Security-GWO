@@ -1,0 +1,71 @@
+# Project Report
+
+## Title
+Enhancement of Network Security in MANET by Using Guided Whale Optimization Algorithm
+
+## Abstract
+Mobile Ad hoc Networks (MANETs) are susceptible to node compromise, route disruption, and malicious packet forwarding because they operate without centralized infrastructure. This project proposes a secure route selection strategy powered by a Guided Whale Optimization Algorithm (GWO-inspired optimization) to improve the reliability and trustworthiness of communication paths in MANETs. The system evaluates node trust, residual energy, and malicious behavior to choose a route with higher security and better quality-of-service metrics.
+
+## 1. Introduction
+MANETs are useful in disaster recovery, battlefield communication, and emergency response networks. However, security is a major challenge because nodes are mobile, battery constrained, and vulnerable to attacks such as blackhole, grayhole, wormhole, and packet dropping. Traditional routing protocols may select shortest paths that ignore malicious participation. This project addresses this issue by introducing a guided optimization model to discover secure routes.
+
+## 2. Literature Review
+Existing research has focused on trust-based routing, ant colony optimization, particle swarm optimization, and fitness-based secure route selection. Whale Optimization Algorithm (WOA) is known for exploration and exploitation properties. The Guided Whale Optimization variant incorporates a direction toward secure and reliable nodes, which makes it particularly suitable for MANET security enhancement.
+
+## 3. System Model
+The network is modeled as a graph with:
+- nodes representing mobile devices,
+- edges representing wireless communication links,
+- trust values associated with each node,
+- residual energy representing remaining power,
+- malicious nodes representing compromised or adversarial participants.
+
+The optimization objective is to maximize path security while maintaining acceptable energy and latency.
+
+## 4. Proposed Methodology
+The proposed approach contains the following steps:
+1. Construct a MANET graph.
+2. Assign trust and residual energy to each node.
+3. Identify malicious nodes in the network.
+4. Generate multiple candidate routes as whale positions.
+5. Score each route using a security fitness function based on trust, energy, malicious nodes, and route length.
+6. Update the candidate routes with a guided whale search strategy.
+7. Select the best route that avoids suspicious nodes and delivers improved network performance.
+
+The route fitness function can be approximated as:
+
+F(route) = 0.55 * Trust + 0.25 * Energy + 0.20 / (1 + malicious_hits + 0.25 * hop_count)
+
+This ensures that secure and energy-rich nodes are preferred over untrusted or malicious routes.
+
+## 5. Implementation Details
+The project is implemented in Python and contains:
+- graph generation
+- malicious node simulation
+- fitness evaluation
+- guided whale optimization routine
+- performance analysis and plotting
+
+## 6. Performance Metrics
+The project evaluates the following metrics:
+- Packet Delivery Ratio (PDR)
+- Throughput
+- Average delay
+- Network lifetime
+- Route trust score
+- Security score
+- Number of malicious nodes avoided
+
+## 7. Results and Discussion
+The algorithm identifies a secure route and avoids malicious nodes, improving packet delivery while reducing disruption in the network. The simulation results show a higher route trust value and better overall network lifetime when compared to a conventional shortest-path routing strategy.
+
+## 8. Conclusion
+The Guided Whale Optimization approach provides an effective mechanism for secure route discovery in MANETs. It improves network security by considering trust, energy, and path reliability in the selection process. This can be extended further for larger dynamic networks, intrusion detection integration, and real-time routing simulation.
+
+## 9. References
+1. S. Das, A. K. Pathak, and N. K. Sharma, "Security in MANETs: Review and Challenges."
+2. M. Dorigo and T. Stützle, "Ant Colony Optimization."
+3. J. Kennedy and R. Eberhart, "Particle Swarm Optimization."
+4. S. Mirjalili and A. Lewis, "The Whale Optimization Algorithm."
+5. Wireless routing and security models in mobile ad hoc networks.
+

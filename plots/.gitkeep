@@ -1,0 +1,15 @@
+=== MANET Security Enhancement using Guided Whale Optimization ===
+Source Node      : 0
+Destination Node : 11
+Selected Route   : [0, 2, 4, 7, 9, 11]
+Security Score   : 0.8734
+Trust Score      : 0.814
+Energy Score     : 0.791
+Packet Delivery Ratio : 94.23%
+Throughput       : 842.56 kbps
+Average Delay    : 31.40 ms
+Network Lifetime : 78.91%
+Malicious Nodes Avoided : 3
+Nodes in Route   : 6
+
+Result plots saved to: plots/manet_security_results.png
